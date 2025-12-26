@@ -1,4 +1,3 @@
-import "../style.css";
 import * as THREE from "three";
 
 // ---------- 3D HERO: CubeSat in LEO (stylized demo) ----------
