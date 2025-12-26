@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>SafeSat</title>
   </head>
   <body>
     <header class="topbar">
@@ -15,26 +15,113 @@
       </nav>
     </header>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="h1" style="margin:0 0 10px">About Us</h1>
-        <p class="p">
-          Write your mission, origin story, and what makes your approach different.
-          Keep this page simple and credible: what you do, how you validate, who you work with.
-        </p>
+    <!-- Homepage hero: 3D orbiting CubeSat -->
+    <section class="hero">
+      <div id="hero3d"></div>
 
-        <div class="card" style="margin-top:18px">
-          <div class="h2">Team</div>
-          <p class="p muted">Short bios and roles here.</p>
-        </div>
+      <div class="container heroOverlay">
+        <div class="heroContent">
+          <h1 class="h1">Protect CubeSat solar panels from micro-debris degradation.</h1>
+          <p class="subhead">
+            A lightweight protective frame with data insights to reduce operational risk and extend mission longevity in LEO.
+          </p>
 
-        <div class="card" style="margin-top:12px">
-          <div class="h2">Validation</div>
-          <p class="p muted">Test plan, prototypes, or early partners here.</p>
+          <!-- Problem (collisions) counter - key performance indicator -->
+          <div class="kpiRow">
+            <div class="kpi">
+              <div class="label">Simulated impacts</div>
+              <div class="value"><span id="impactCount">0</span></div>
+            </div>
+            <div class="kpi">
+              <div class="label">Panel efficiency</div>
+              <div class="value"><span id="efficiency">100.0</span>%</div>
+            </div>
+            <div class="kpi">
+              <div class="label">Projected lifetime</div>
+              <div class="value"><span id="lifetime">12</span> mo</div>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
 
-    <script type="module" src="/js/about.js"></script>
+    <!-- Landing page sections -->
+    <section class="section">
+      <div class="container grid2">
+        <div class="card">
+          <div class="h2">Problem</div>
+          <p class="p">
+            In LEO, micro-debris and harsh environmental conditions can degrade solar panel performance.
+            The counter above exaggerates the “risk accumulation” to make the problem emotionally clear.
+          </p>
+          <p class="p muted" style="margin-top:10px">
+            (Later you’ll replace the exaggeration logic with real assumptions / citations.)
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="h2">Solution</div>
+          <p class="p">
+            A protective frame and testing workflow designed to preserve panel function—plus optional
+            collision data collection for research institutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before/After slider -->
+    <section class="section">
+      <div class="container">
+        <div class="h2">Before / After</div>
+
+        <div class="compare" id="compare">
+          <div class="layer before">BEFORE: exposed panel</div>
+          <div class="layer after" id="afterLayer">AFTER: protected panel</div>
+          <div class="compareUi">
+            <span class="muted">Before</span>
+            <input id="compareRange" type="range" min="0" max="100" value="50" />
+            <span class="muted">After</span>
+          </div>
+        </div>
+
+        <p class="p muted" style="margin-top:12px">
+          Replace these placeholders with images or renders later (drop files into <code>public/img/</code> and swap CSS).
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="h2">Stats</div>
+        <div class="stats">
+          <div class="card">
+            <div class="h2">Collisions impacted</div>
+            <p class="p"><b id="statCollisions">—</b></p>
+          </div>
+          <div class="card">
+            <div class="h2">Efficiency saved</div>
+            <p class="p"><b id="statSaved">—</b></p>
+          </div>
+          <div class="card">
+            <div class="h2">Longevity gain</div>
+            <p class="p"><b id="statLongevity">—</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof -->
+    <section class="section">
+      <div class="container">
+        <div class="h2">Social proof</div>
+        <blockquote>
+          “(Placeholder) The framing approach is promising...”
+          <div class="quoteBy">— Giorgio Divitini, ESA Space PV Specialist </div>
+        </blockquote>
+      </div>
+    </section>
+
+    <script type="module" src="/js/home.js"></script>
   </body>
 </html>
