@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">SafeSat</div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/services.html">Services</a>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="h1" style="margin:0 0 10px">Services</h1>
+        <p class="p muted">
+          Scroll down: the “exploding assembly” demo expands as you scroll.
+        </p>
+      </div>
+    </main>
+
+    <section class="section" style="padding-top:0">
+      <div class="container grid2">
+        <div class="card" style="min-height:520px; position:relative; overflow:hidden;">
+          <div class="h2">Exploding assembly</div>
+          <div id="product3d" style="position:absolute; inset:52px 12px 12px; border-radius:14px; overflow:hidden; border:1px solid var(--border);"></div>
+          <p class="p muted" style="position:absolute; left:18px; bottom:14px; right:18px;">
+            Scroll to “release” components. Use mouse/touch to rotate and zoom.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="h2">Product</div>
+          <p class="p">
+            Protective frame for CubeSat solar panels & integration support – all in one.
+          </p>
+
+          <div class="h2" style="margin-top:18px">Specifications</div>
+          <p class="p muted">Add weight, dimensions, material, integration steps, test results.</p>
+
+          <div class="h2" style="margin-top:18px">Impact</div>
+          <p class="p">
+            + <b>Projected lifetime</b> (months)<br/>
+            + <b>Efficiency preserved</b> (%)<br/>
+            + <b>Risk reduction</b> (qualitative + quantitative)
+          </p>
+
+          <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn btnPrimary" id="requestQuote">Request quote</button>
+            <button class="btn" id="showPricing">Show price ranges</button>
+          </div>
+
+          <p class="p muted" id="pricing" style="margin-top:12px; display:none;">
+            Example: Prototype frame (lab) $X–$Y • Flight-ready unit $X–$Y • Integration support $X–$Y
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/js/services.js"></script>
+  </body>
+</html>
